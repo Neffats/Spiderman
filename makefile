@@ -1,6 +1,18 @@
-CC := gcc
-CCFLAGS :=
-LDFLAGS :=
+CC 	= gcc
+CCFLAGS = -Wall -Werror
+LDFLAGS	=
+RM	= rm -f 
+TARG 	= spiderman
+SRCS 	= spiderman.c
+BIN	= bin/
 
-spiderman: spiderman.c
-	$(CC) $(CCFLAGS) -o spiderman spiderman.c
+default: all
+
+all: $(TARG)
+
+$(TARG): $(SRCS)
+	$(CC) -o $(BIN)$(TARG) $(SRCS) $(CCFLAGS)
+
+clean veryclean:
+	$(RM) $(BIN)$(TARG)
+
