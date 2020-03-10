@@ -3,7 +3,7 @@ CCFLAGS = -Wall -Werror
 LDFLAGS	=
 RM	= rm -f 
 TARG 	= spiderman
-SRCS 	= spiderman.c
+SRCS 	= src/spiderman.c
 BIN	= bin/
 
 default: all
